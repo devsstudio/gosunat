@@ -26,7 +26,7 @@ var TABLE_2_ITEMS = map[Table2]string{
 	ID_0: "Otro",
 }
 
-func validateCode(code string) bool {
+func ValidateCode(code string) bool {
 	allowedCodes := []Table2{ID_1, ID_4, ID_6, ID_7, ID_A, ID_0}
 	for _, validCode := range allowedCodes {
 		if Table2(code) == validCode {
@@ -36,7 +36,7 @@ func validateCode(code string) bool {
 	return false
 }
 
-func validateNumber(code Table2, number string) bool {
+func ValidateNumber(code Table2, number string) bool {
 	validate := validator.New()
 
 	switch code {
@@ -63,6 +63,6 @@ func validateNumber(code Table2, number string) bool {
 	}
 }
 
-func getName(value string) string {
+func GetName(value string) string {
 	return TABLE_2_ITEMS[Table2(value)]
 }
