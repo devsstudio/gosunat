@@ -1,4 +1,4 @@
-package table11
+package table8
 
 // Table8 es una enumeración de tipo string
 type Table8 string
